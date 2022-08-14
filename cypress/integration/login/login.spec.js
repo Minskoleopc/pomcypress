@@ -3,6 +3,10 @@ import * as login from "../../support/model/login.js"
 import * as dashboard from "../../support/model/dashboard"
 describe('verify the Orange HRM login form',function(){
 
+    beforeEach(function(){
+        cy.visit('https://opensource-demo.orangehrmlive.com/index.php/dashboard')
+    })
+
     it('verify the login functionality',function(){
         login.login('Admin','admin123')
         dashboard.verifyDashboardPageUrl()

@@ -4,6 +4,10 @@ import * as dashboard from "../../support/model/dashboard"
 
 describe('verify the Orange HRM login form', function () {
     
+    beforeEach(function(){
+        cy.visit('https://opensource-demo.orangehrmlive.com')
+    })
+
     it('verify the login functionality', function () {
         let login = new loginC()
         login.login('Admin', 'admin123')
